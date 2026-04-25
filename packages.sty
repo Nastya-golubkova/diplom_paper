@@ -40,9 +40,6 @@
 % Этот пакет позволяет делать горизонтальные нумерованные перични
 \RequirePackage{enumitem}
 
-% Этот пакет позволяет делать активные цветные гиперссылки.
-\RequirePackage[colorlinks=true, urlcolor=blue]{hyperref}
-
 % Диаграммы (схемы архитектуры, шифрования, SignalR)
 \RequirePackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,shapes.multipart,shapes.geometric,fit,calc,babel,backgrounds}
@@ -52,4 +49,15 @@
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{code_cpp}
 \RequirePackage{code_python}
+
+% Гиперссылки подключаются в конце преамбулы, чтобы избежать конфликтов
+% с пакетами, которые могут переопределять внутренние команды.
+\RequirePackage{hyperref}
+\hypersetup{
+  unicode=true,
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
 
