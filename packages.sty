@@ -50,14 +50,5 @@
 \RequirePackage{code_cpp}
 \RequirePackage{code_python}
 
-% Гиперссылки подключаются в конце преамбулы, чтобы избежать конфликтов
-% с пакетами, которые могут переопределять внутренние команды.
-\RequirePackage{hyperref}
-\hypersetup{
-  unicode=true,
-  colorlinks=true,
-  linkcolor=blue,
-  citecolor=blue,
-  urlcolor=blue
-}
+% Гиперссылки подключаются в template.tex после всех \usepackage (см. конец преамбулы).
 
